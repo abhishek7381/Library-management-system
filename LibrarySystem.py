@@ -33,7 +33,7 @@ class LibrarySystem:
         )
         """
         query_transactions = """
-        CREATE TABLE IF NOT EXISTS transactions (
+        CREATE TABLE IF NOT EXISTS transactions ( 
             transaction_id INT AUTO_INCREMENT PRIMARY KEY,
             user_id INT,
             book_id INT,
@@ -241,7 +241,7 @@ def main():
     library_system = LibrarySystem(db_host, db_user, db_password, db_name)
 
     while True:
-        print("\n SILICON LIBRARY MANAGEMENT SYSTEM")
+        print("\n LIBRARY MANAGEMENT SYSTEM")
         print("1. Add Book")
         print("2. Create User Account")
         print("3. Display Books")
@@ -294,7 +294,7 @@ def main():
             
         elif choice == "7":
             library_system.close_connection()
-            print("Exiting Silicon Library.... Goodbye!")
+            print("Exiting Library.... Goodbye!")
             break
 
         else:
